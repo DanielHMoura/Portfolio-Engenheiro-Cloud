@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum - Example</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/impressum.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+    
+    <div class="flex h-screen">
+        <!-- Toggle Button Mobile -->
+        <button id="menuToggle" class="md:hidden fixed top-4 left-4 z-[51] text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Sidebar -->
+        <aside id="sidebar" class="fixed left-0 top-0 w-80 h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 border-r border-slate-700/50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 flex flex-col overflow-hidden">
+            <nav class="flex-1 px-6 py-8 overflow-y-auto flex items-center justify-center w-full">
+                <ul class="space-y-1 text-center w-full">
+                    <li>
+                        <a href="index.html#home" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-center">
+                            <i class="fas fa-home w-5"></i>
+                            <span class="font-medium">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html#about" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-center">
+                            <i class="fas fa-user w-5"></i>
+                            <span class="font-medium">Über mich</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="p-6 border-t border-slate-700/50 w-full flex-shrink-0">
+                <select id="langSelector" class="w-full bg-slate-800/50 text-slate-300 border border-slate-700 rounded-lg px-4 py-2 hover:border-cyan-400 focus:border-cyan-400 focus:outline-none transition-colors">
+                    <option value="de" selected>Deutsch</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-scroll h-screen w-full md:ml-80">
+            <section class="min-h-screen flex items-center justify-center px-4 md:px-12 py-12 md:py-20">
+                <div class="max-w-4xl w-full animate-fadeIn">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-12 md:mb-16">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Impressum</h1>
+                        <p class="text-slate-400">Angaben gemäß § 5 TMG</p>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="bg-slate-800/40 border border-slate-700/50 rounded-lg p-6 md:p-8 space-y-6 text-slate-300">
+                        
+                        <!-- Anbieter -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Anbieter</h2>
+                            <p class="leading-relaxed">
+                                    <strong>Name:</strong> Example<br>
+                                    <strong>Adresse:</strong> Lorem ipsum str. 1<br>
+                                    00000 Stadttown<br>
+                                    Germany<br><br>
+                                <strong>E-Mail:</strong> <a href="mailto:contact@example.com" class="text-cyan-400 hover:text-cyan-300">contact@example.com</a>
+                            </p>
+                        </div>
+                        
+                        <!-- Haftung -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Haftung für Inhalte</h2>
+                            <p class="leading-relaxed">
+                                Die Inhalte dieser Webseite werden mit größter Sorgfalt erstellt und regelmäßig aktualisiert. 
+                                    Dennoch können Fehler und Unklarheiten nicht ausgeschlossen werden. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+                            </p>
+                        </div>
+                        
+                        <!-- Externe Links -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Haftung für Links</h2>
+                            <p class="leading-relaxed">
+                                Diese Webseite enthält Links zu externen Webseiten. Der Anbieter ist für deren Inhalte 
+                                    nicht verantwortlich und macht sich deren Inhalte nicht zu Eigen. The site owner has no 
+                                Einfluss auf die aktuelle und zukünftige Gestaltung dieser externen Webseiten.
+                            </p>
+                        </div>
+                        
+                        <!-- Copyright -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Urheberrecht</h2>
+                            <p class="leading-relaxed">
+                                Die Inhalte dieser Webseite sind urheberrechtlich geschützt. Eine Vervielfältigung, 
+                                    Bearbeitung oder Verbreitung ist ohne ausdrückliche Genehmigung nicht gestattet. Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        
+                        <!-- Datenschutz -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Datenschutz</h2>
+                            <p class="leading-relaxed">
+                                    Weitere Informationen zum Datenschutz finden Sie in unserer 
+                                <a href="datenschutz.html" class="text-cyan-400 hover:text-cyan-300">Datenschutzerklärung</a>.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Button -->
+                    <div class="mt-8">
+                        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400/20 rounded-lg transition-all">
+                            <i class="fas fa-arrow-left"></i>
+                            Zurück zur Startseite
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

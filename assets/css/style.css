@@ -1,0 +1,672 @@
+/**
+ * Complementary CSS for Tailwind
+ */
+
+:root {
+    --primary: #818cf8;
+    --secondary: #d4b5f5;
+}
+
+/* Screen reader only utility */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Skip link style - appears when focused */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 8px;
+    z-index: 60;
+    background: #0f172a;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 8px;
+}
+
+/* Smooth scrolling moved to consolidated html block at the bottom */
+
+/* ===== CAROUSEL - DESKTOP E MOBILE ===== */
+@media (max-width: 768px) {
+    #recommendationsTrack {
+        display: flex;
+        gap: 0;
+        will-change: transform;
+        padding: 0;
+    }
+    
+    .carousel-item {
+        min-width: 0;
+        flex-shrink: 0;
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+    #recommendationsDots {
+        display: flex !important;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+/* DESKTOP - CAROUSEL 1 POR VEZ (NÃO GRID) */
+@media (min-width: 768px) {
+    #recommendationsTrack {
+        display: flex;           /* ← FLEX, não GRID */
+        gap: 0;
+        will-change: transform;
+        padding: 0;
+        transition-property: transform;
+        transition-duration: 500ms;
+        transition-timing-function: ease-in-out;
+    }
+    
+    .carousel-item {
+        min-width: 100%;         /* ← 100% da largura */
+        flex-shrink: 0;
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    #recommendationsDots {
+        display: flex !important;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+}
+
+/* ===== FULL SCREEN SECTIONS ===== */
+main {
+    scroll-behavior: smooth;
+}
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.section {
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+#home.section {
+    opacity: 1;
+    animation: none;
+}
+
+.section:not(#home) {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.section:not(#home).visible {
+    opacity: 1;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* Fade Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+/* Animação de Digitação */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+/* Classe para aplicar fade in */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+  opacity: 0;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease-in-out forwards;
+}
+
+/* Estilo para texto com efeito de digitação */
+.typing-text {
+  overflow: hidden;
+  border-right: 3px solid #ff8006;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* Slide In Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* early animate classes removed; optimized ones remain below */
+
+.animate-slideInUp {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+    animation-delay: 0.4s;
+}
+
+.animation-delay-600 {
+    animation-delay: 0.6s;
+}
+
+.animation-delay-700 {
+    animation-delay: 0.7s;
+}
+
+/* Active nav link block removed (consolidated further down) */
+
+/* NOT applying nav active styling automatically to contact links */
+
+/* Remove glow/brilho no Contact */
+a[href="#contact"]:focus,
+a[href="#contact"]:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Hover styling consolidated in main nav-link block below */
+
+/* Typography */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-user-select: text;
+    user-select: text;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #818cf8;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a78bfa;
+}
+
+/* Links */
+a {
+    transition: color 0.3s ease;
+}
+
+/* Mobile Menu (full styles further below) - small duplicate removed */
+
+/* ===== SIDEBAR / MENU LATERAL ===== */
+#sidebar {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #22d3ee;
+    letter-spacing: -0.02em;
+}
+
+/* Navigation Links */
+.nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #cbd5e1;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.nav-link i {
+    width: 1.25rem;
+    margin-right: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #22d3ee;
+    background-color: transparent; /* keeping hover color only, avoids contrast issues */
+}
+
+/* Active Link - SEM BRILHO */
+.nav-link.active {
+    color: #22d3ee;
+    background-color: transparent;
+}
+
+.nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background: #22d3ee;
+    border-radius: 0 2px 2px 0;
+}
+
+.nav-link.active i {
+    transform: scale(1.1);
+}
+
+/* Language Selector */
+#langSelector {
+    width: 100%;
+    background-color: #0f172a;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#langSelector:hover {
+    border-color: #22d3ee;
+    background-color: #1e293b;
+}
+
+#langSelector:focus {
+    outline: none;
+    border-color: #22d3ee;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+}
+
+#langSelector option {
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+/* Menu Toggle Button */
+#menuToggle {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #22d3ee;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 50;
+}
+
+#menuToggle:hover {
+    background-color: #0f172a;
+    border-color: #22d3ee;
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+#menuToggle i {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+/* Overlay para mobile */
+@media (max-width: 768px) {
+    #sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 16rem;
+        height: 100vh;
+        z-index: 40;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    body.menu-open #sidebar {
+        transform: translateX(0);
+    }
+    
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 30;
+    }
+}
+
+/* Scroll customizado no sidebar */
+#sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* ===== RECOMMENDATIONS SECTION ===== */
+#testimonialText {
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#recommendations .bg-gradient-to-br {
+    min-height: auto;
+}
+
+/* ===== LINKEDIN ICON LINK ===== */
+#linkedinLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: #22d3ee;
+    transition: all 0.3s ease;
+}
+
+#linkedinLink:hover {
+    color: #06b6d4;
+    background-color: transparent; /* no background to avoid contrast issues */
+    transform: scale(1.1);
+}
+
+#linkedinLink i {
+    font-size: 1.5rem;
+}
+
+/* ===== RECOMMENDATIONS CAROUSEL ===== */
+#recommendationsTrack {
+    display: flex;
+    transition: transform 300ms ease-in-out;
+}
+
+/* CARD DO CAROUSEL */
+#recommendationsTrack > div {
+    min-width: 100%;
+    flex-shrink: 0;
+    padding: 0 1rem;
+}
+
+/* Conteúdo interno do card */
+#recommendationsTrack .bg-gradient-to-br {
+    min-height: 380px;  /* ← Tamanho da imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #recommendationsTrack .bg-gradient-to-br {
+        min-height: 350px;
+        padding: 1.5rem;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    #recommendationsTrack .bg-gradient-to-br {
+        min-height: 420px;
+        padding: 3rem;
+    }
+}
+
+/* DOTS */
+#recommendationsDots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+/* ADICIONE ISTO AQUI: */
+@media (min-width: 768px) {
+    #menuToggle {
+        display: none !important;  /* ← ESCONDE EM DESKTOP */
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== REMOVE WEBKIT TEXT SIZE ADJUST ===== */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+/* ===== FIX FIREFOX MIN-HEIGHT ===== */
+@supports not (min-height: auto) {
+    .flex {
+        display: flex;
+        min-height: unset;
+    }
+}
+
+/* ===== PREVENT LAYOUT SHIFT ===== */
+/* border-right set in main nav-link block to prevent layout-shift */
+/* (small duplicate removed) */
+
+/* ===== OPTIMIZED ANIMATIONS ===== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slideInLeft {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+    animation: slideInRight 0.8s ease-out;
+}
+
+/* ===== SECURITY: PREVENT TEXT SELECTION ABUSE ===== */
+/* button and a selection prevention retained */
+button, a {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ===== PERFORMANCE: GPU ACCELERATION ===== */
+/* Merged into the main .section block above */
+
+/* ===== CERTIFICATE MODAL STYLES ===== */
+#certModal {
+    padding: 1rem; /* ensures spacing on small screens */
+    align-items: center;
+    justify-content: center;
+}
+
+#certModalInner {
+    max-width: 95vw;
+    max-height: 92vh;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#certModalImage {
+    max-width: 100%;
+    max-height: calc(100vh - 6rem);
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 18px 40px rgba(2,6,23,0.6);
+}
+
+#certModalClose {
+    position: absolute; /* positioned relative to certModalInner */
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0,0,0,0.35);
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    z-index: 60;
+    transition: background-color 0.18s ease;
+}
+
+#certModalClose:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+@media (max-width: 640px) {
+    #certModalImage {
+        max-height: calc(100vh - 4.5rem);
+    }
+    #certModalClose {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+}

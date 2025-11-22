@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - Example</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://example.com/datenschutz.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+    
+    <div class="flex h-screen">
+        <!-- Toggle Button Mobile -->
+        <button id="menuToggle" class="md:hidden fixed top-4 left-4 z-[51] text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Sidebar -->
+        <aside id="sidebar" class="fixed left-0 top-0 w-80 h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 border-r border-slate-700/50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 flex flex-col overflow-hidden">
+            <nav class="flex-1 px-6 py-8 overflow-y-auto flex items-center justify-center w-full">
+                <ul class="space-y-1 text-center w-full">
+                    <li>
+                        <a href="index.html#home" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-center">
+                            <i class="fas fa-home w-5"></i>
+                            <span class="font-medium">Home</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="p-6 border-t border-slate-700/50 w-full flex-shrink-0">
+                <select id="langSelector" class="w-full bg-slate-800/50 text-slate-300 border border-slate-700 rounded-lg px-4 py-2 hover:border-cyan-400 focus:border-cyan-400 focus:outline-none transition-colors">
+                    <option value="de" selected>Deutsch</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-scroll h-screen w-full md:ml-80">
+            <section class="min-h-screen flex items-center justify-center px-4 md:px-12 py-12 md:py-20">
+                <div class="max-w-4xl w-full animate-fadeIn">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-12 md:mb-16">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Datenschutzerklärung</h1>
+                        <p class="text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="bg-slate-800/40 border border-slate-700/50 rounded-lg p-6 md:p-8 space-y-6 text-slate-300">
+                        
+                        <!-- Verantwortlicher -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Verantwortlicher</h2>
+                            <p class="leading-relaxed">
+                                <strong>Name:</strong> Example<br>
+                                <strong>Adresse:</strong> Lorem ipsum str. 1<br>
+                                00000 Stadttown<br>
+                                Germany<br><br>
+                                <strong>E-Mail:</strong> <a href="mailto:contact@example.com" class="text-cyan-400 hover:text-cyan-300">contact@example.com</a>
+                            </p>
+                        </div>
+                        
+                        <!-- Datensicherheit -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Datensicherheit</h2>
+                            <p class="leading-relaxed">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                            </p>
+                        </div>
+                        
+                        <!-- Google Analytics -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Google Analytics & Tag Manager</h2>
+                            <p class="leading-relaxed mb-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <p class="leading-relaxed">
+                                <strong>Cookies:</strong> lorem_cookie<br>
+                                <strong>Speicherdauer:</strong> 2 Jahre<br>
+                                <strong>Zweck:</strong> Lorem ipsum analysis
+                            </p>
+                        </div>
+                        
+                        <!-- Externe Links -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Externe Links</h2>
+                            <p class="leading-relaxed">
+                                Diese Website enthält Links zu externen Plattformen. Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        
+                        <!-- Ihre Rechte -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Ihre Rechte</h2>
+                            <p class="leading-relaxed mb-3">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 leading-relaxed">
+                                <li><strong>Auskunftsrecht:</strong> Sie können erfragen, welche Daten wir über Sie haben</li>
+                                <li><strong>Recht auf Berichtigung:</strong> Sie können fehlerhafte Daten korrigieren lassen</li>
+                                <li><strong>Recht auf Löschung:</strong> Sie können die Löschung Ihrer Daten verlangen</li>
+                                <li><strong>Recht auf Datenportabilität:</strong> Sie können Ihre Daten exportieren</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Kontakt -->
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-bold text-white mb-3">Kontakt</h2>
+                            <p class="leading-relaxed">
+                                Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns bitte unter:<br>
+                                <a href="mailto:contact@example.com" class="text-cyan-400 hover:text-cyan-300">contact@example.com</a>
+                            </p>
+                        </div>
+                        
+                        <!-- Last Updated -->
+                        <div class="pt-6 border-t border-slate-700">
+                            <p class="text-xs md:text-sm text-slate-400">
+                                Letzte Aktualisierung: 22. November 2025
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Button -->
+                    <div class="mt-8">
+                        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400/20 rounded-lg transition-all">
+                            <i class="fas fa-arrow-left"></i>
+                            Zurück zur Startseite
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

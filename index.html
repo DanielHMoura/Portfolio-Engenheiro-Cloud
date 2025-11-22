@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ✅ SEO ESSENCIAL -->
+    <title>Example - Cloud Engineer | AWS Specialist | DevOps Expert</title>
+    <meta name="description" content="Cloud Engineer specializing in AWS, Terraform, Docker, and DevOps automation. Infrastructure as Code expert based in Germany.">
+    <meta name="keywords" content="Cloud Engineer, AWS, Terraform, DevOps, CI/CD, Docker, Kubernetes, Infrastructure as Code">
+    <meta name="author" content="Example">
+    <meta name="language" content="English, German">
+    <meta name="robots" content="index, follow">
+    
+    <!-- ✅ OG TAGS (Social Media) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Example - Cloud Engineer | AWS Specialist">
+    <meta property="og:description" content="Cloud Engineer specializing in AWS, Terraform, Docker, and DevOps automation.">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/assets/image/placeholder.svg">
+    
+    <!-- ✅ TWITTER TAGS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Example - Cloud Engineer | AWS Specialist">
+    <meta name="twitter:description" content="Cloud Engineer specializing in AWS, Terraform, Docker, and DevOps automation.">
+    <meta name="twitter:image" content="https://example.com/assets/image/placeholder.svg">
+    
+    <!-- ✅ CANONICAL URL -->
+    <link rel="canonical" href="https://example.com">
+    
+    <!-- ✅ FAVICON -->
+    <link rel="icon" type="image/x-icon" href="assets/image/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/image/placeholder.svg">
+    
+    <!-- ✅ STRUCTURED DATA (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Example",
+        "url": "https://example.com",
+        "image": "https://example.com/assets/image/placeholder.svg",
+        "jobTitle": "Cloud Engineer",
+        "sameAs": [
+            "https://example.com",
+            "https://example.com"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Professional Contact",
+            "email": "contact@example.com"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Germany"
+        },
+        "knowsAbout": [
+            "AWS",
+            "Terraform",
+            "Docker",
+            "Kubernetes",
+            "DevOps",
+            "CI/CD",
+            "Infrastructure as Code",
+            "Cloud Computing"
+        ]
+    }
+    </script>
+    
+    <!-- ✅ OPEN GRAPH FOR LINKEDIN -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <script src="assets/js/translations.js"></script> 
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/carousel.js"></script>      
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ✅ GOOGLE TAG MANAGER -->
+    <!-- Google Analytics removed for public repo; re-add your own G-XXXXXXXX when deploying -->
+    
+    <!-- Google Tag Manager removed for public repository; add your GTM container in production -->
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100">
+    <!-- Skip to main content -->
+    <a href="#home" class="skip-link sr-only focus:not-sr-only">Skip to main content</a>
+    
+    <div class="flex h-screen">
+        <!-- Toggle Button Mobile - FORA da aside -->
+        <!-- BOTÃO TOGGLE MOBILE - COM ARIA-LABEL -->
+        <button id="menuToggle" class="md:hidden fixed top-4 left-4 z-[51] text-white text-2xl" 
+                title="Abrir menu" 
+                aria-label="Abrir menu de navegação">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <aside id="sidebar" class="fixed left-0 top-0 w-64 h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 border-r border-slate-700/50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 flex flex-col overflow-hidden">           
+            
+            <!-- Navigation - AGORA SEM CONFLITO -->
+            <nav class="flex-1 px-6 py-8 overflow-y-auto flex items-center justify-center w-full">
+                <ul class="space-y-1 w-full">
+                    <li>
+                        <a href="#home" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fas fa-home w-5"></i>
+                            <span class="font-medium" data-i18n="nav.home">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fas fa-user w-5"></i>
+                            <span class="font-medium" data-i18n="nav.about">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fas fa-star w-5"></i>
+                            <span class="font-medium" data-i18n="nav.projects">Skills & Technologies</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#certifications" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fas fa-certificate w-5"></i>
+                            <span class="font-medium" data-i18n="nav.certifications">Certifications</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#github" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fab fa-github w-5"></i>
+                            <span class="font-medium" data-i18n="nav.github">GitHub Projects</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#recommendations" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fas fa-comments w-5"></i>
+                            <span class="font-medium" data-i18n="nav.recommendations">Recommendations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link group px-4 py-3 rounded-lg flex items-center gap-3 text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-200 justify-start">
+                            <i class="fas fa-envelope w-5"></i>
+                            <span class="font-medium" data-i18n="nav.contact">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Language Selector - FOOTER -->
+            <!-- SELETOR DE IDIOMA - COM ARIA-LABEL -->
+            <div class="p-6 border-t border-slate-700/50 w-full flex-shrink-0">
+                <select id="langSelector" 
+                        class="w-full bg-slate-800/50 text-slate-300 border border-slate-700 rounded-lg px-4 py-2 hover:border-cyan-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                        aria-label="Selecionar idioma">
+                    <option value="en">English</option>
+                    <option value="de" selected>Deutsch</option>
+                </select>
+            </div>
+        </aside>
+        
+        <!-- MAIN CONTENT (SCROLL SECTIONS) -->
+        <main class="flex-1 overflow-y-scroll h-screen w-full md:ml-64">
+            
+            <!-- HOME - Apenas Capa Limpa -->
+            <section id="home" class="section h-screen flex items-center justify-center overflow-hidden relative px-4 md:px-12 py-6 md:py-20 bg-white">
+                <div class="max-w-2xl w-full flex flex-col items-center justify-center">
+                    
+                    <!-- Profile Image Circle -->
+                    <div class="mb-8 md:mb-12 animate-fadeIn">
+                        <div class="relative w-48 h-48 md:w-80 md:h-80 mx-auto">
+                            <img src="assets/image/placeholder.svg" alt="Placeholder profile" class="w-full h-full object-cover rounded-full border-4 border-gray-300">
+                        </div>
+                    </div>
+                    
+                    <!-- Name with Typing Animation -->
+                    <h1 class="text-3xl md:text-6xl font-bold text-gray-900 mb-2 md:mb-3 text-center min-h-auto md:min-h-20 animate-fadeIn">
+                        <span class="sr-only">Name Placeholder</span>
+                        <span id="typedName" aria-live="polite" class="text-transparent bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text"></span>
+                    </h1>
+                    
+                    <!-- Title -->
+                    <h2 class="text-lg md:text-3xl text-gray-700 font-semibold text-center mb-6 md:mb-8 animate-fadeIn px-4" data-i18n="home.subtitle">Cloud Engineer · Automation Enthusiast</h2>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex justify-center gap-4 md:gap-6 animate-fadeIn">
+                        <a href="#" target="_blank" 
+                           class="w-10 h-10 md:w-12 md:h-12 bg-gray-200 hover:bg-gray-800 text-gray-800 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 text-sm md:text-lg"
+                           title="GitHub - Example"
+                           aria-label="Visite GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" target="_blank" 
+                           class="w-10 h-10 md:w-12 md:h-12 bg-gray-200 hover:bg-gray-800 text-gray-800 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 text-sm md:text-lg"
+                           title="LinkedIn - Example"
+                           aria-label="Visite LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@example.com" 
+                           class="w-10 h-10 md:w-12 md:h-12 bg-gray-200 hover:bg-gray-800 text-gray-800 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 text-sm md:text-lg"
+                           title="Enviar email"
+                           aria-label="Enviar email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT - Descrição + Hobbies -->
+            <section id="about" class="section min-h-screen flex items-center justify-center overflow-hidden relative px-4 md:px-12 py-6 md:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                <div class="max-w-7xl w-full">
+                    
+                    <!-- Header - Centralizado -->
+                    <div class="text-center mb-12 md:mb-20">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-3 md:mb-4">
+                            <span data-i18n="about.title">About</span>
+                        </h2>
+                        <div class="w-24 h-1 bg-red-500 mx-auto"></div>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-16">
+                        
+                        <!-- LEFT SIDE - Título + Descrição Profissional -->
+                        <div class="w-full md:w-1/2 animate-slideInLeft">
+                            <h3 class="text-2xl md:text-5xl font-bold text-white mb-6 md:mb-12 leading-tight">
+                                <span data-i18n="about.greeting">Lorem ipsum</span><br>
+                            </h3>
+                            
+                            <div class="space-y-4 md:space-y-6">
+                                <p class="text-base md:text-lg text-slate-300 leading-relaxed" data-i18n="about.description">
+                                    I started my career designing industrial systems in Brazil and now build scalable and secure AWS environments in Germany. My focus is on Infrastructure as Code (Terraform, CDK), CI/CD automation, and cloud monitoring always aiming for simplicity, efficiency, and transparency.
+                                </p>
+                                
+                                <p class="text-base md:text-lg text-slate-300 leading-relaxed" data-i18n="about.philosophy">
+                                    What drives me is the idea that well-designed systems should make complexity look effortless. I love bridging engineering logic with cloud technology to create solutions that work reliably and adapt to change.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- RIGHT SIDE - Hobbies Cards -->
+                        <div class="w-full md:w-1/2 animate-slideInRight">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-6 md:mb-8 pb-3 md:pb-4 border-b-2 border-cyan-400" data-i18n="about.hobbiesTitle">Hobbies</h3>
+                            <div class="space-y-4 md:space-y-6">
+                                
+                                <!-- Hobby 1 - Build Lego -->
+                                <div class="bg-slate-800/40 border border-slate-700/50 p-4 md:p-6 rounded-xl hover:border-slate-600 hover:bg-slate-800/60 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="text-3xl md:text-4xl flex-shrink-0">🧱</div>
+                                        <div>
+                                            <h4 class="text-lg md:text-xl font-semibold text-white mb-1" data-i18n="about.hobbies.0.title">Build Lego</h4>
+                                            <p class="text-slate-400 text-xs md:text-sm" data-i18n="about.hobbies.0.subtitle">Creative Building</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Hobby 2 - Family -->
+                                <div class="bg-slate-800/40 border border-slate-700/50 p-4 md:p-6 rounded-xl hover:border-slate-600 hover:bg-slate-800/60 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="text-3xl md:text-4xl flex-shrink-0">👶</div>
+                                        <div>
+                                            <h4 class="text-lg md:text-xl font-semibold text-white mb-1" data-i18n="about.hobbies.1.title">Family Time</h4>
+                                            <p class="text-slate-400 text-xs md:text-sm" data-i18n="about.hobbies.1.subtitle">My Kids</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Hobby 3 - Family Time -->
+                                <div class="bg-slate-800/40 border border-slate-700/50 p-4 md:p-6 rounded-xl hover:border-slate-600 hover:bg-slate-800/60 transition-all duration-300">
+                                    <div class="flex items-center gap-4">
+                                        <div class="text-3xl md:text-4xl flex-shrink-0">❤️</div>
+                                        <div>
+                                            <h4 class="text-lg md:text-xl font-semibold text-white mb-1" data-i18n="about.hobbies.2.title">Family Time</h4>
+                                            <p class="text-slate-400 text-xs md:text-sm" data-i18n="about.hobbies.2.subtitle">Life Priority</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SKILLS -->
+            <section id="skills" class="section animate-fadeIn min-h-screen flex items-center justify-center px-4 md:px-12 py-6 md:py-20">
+                <div class="max-w-6xl w-full">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-12 md:mb-16">
+                        <div class="text-4xl md:text-6xl text-cyan-400 font-bold mb-3 md:mb-4">10</div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4" data-i18n="skills.title">Skills</h2>
+                        <p class="text-sm md:text-lg text-slate-400" data-i18n="skills.subtitle">I am striving to never stop learning and improving</p>
+                        <div class="flex justify-center gap-3 mt-4">
+                            <div class="w-12 h-1 bg-cyan-400 rounded-full"></div>
+                            <div class="w-12 h-1 bg-cyan-400 rounded-full"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+                        <!-- AWS + Terraform Projects -->
+                        <div class="bg-gradient-to-br from-cyan-400/20 to-cyan-400/5 border-2 border-cyan-400 rounded-2xl p-6 md:p-8 hover:shadow-lg hover:shadow-cyan-400/20 transition-all">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-cyan-400/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-cloud text-xl md:text-2xl text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg md:text-2xl font-bold text-white" data-i18n="skills.categories.cloud.title">AWS + Terraform Projects</h3>
+                                    <p class="text-cyan-400 text-xs md:text-sm font-semibold">Infrastructure as Code</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-xs md:text-sm" data-i18n="skills.categories.cloud.description">Designing and deploying scalable cloud infrastructure using AWS and Terraform, implementing best practices for infrastructure as code and automation.</p>
+                        </div>
+                        
+                        <!-- Cloud Infrastructure | CI/CD | DevOps -->
+                        <div class="bg-gradient-to-br from-cyan-400/20 to-cyan-400/5 border-2 border-cyan-400 rounded-2xl p-6 md:p-8 hover:shadow-lg hover:shadow-cyan-400/20 transition-all">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-12 h-12 md:w-16 md:h-16 bg-cyan-400/20 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-cogs text-xl md:text-2xl text-cyan-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg md:text-2xl font-bold text-white" data-i18n="skills.categories.devops.title">Cloud Infrastructure & DevOps</h3>
+                                    <p class="text-cyan-400 text-xs md:text-sm font-semibold">CI/CD & Container Orchestration</p>
+                                </div>
+                            </div>
+                            <p class="text-slate-300 text-xs md:text-sm" data-i18n="skills.categories.devops.description">Building robust CI/CD pipelines, managing containerized applications with Kubernetes, and implementing DevOps best practices for continuous integration and deployment.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Icons Grid - 10 Tecnologias -->
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                        <!-- AWS -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-orange-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-orange-500/30">
+                                <i class="fab fa-aws text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-orange-500 text-center">AWS</span>
+                        </div>
+                        
+                        <!-- Terraform -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-purple-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-purple-600/30">
+                                <i class="fas fa-cube text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-purple-600 text-center">TERRAFORM</span>
+                        </div>
+                        
+                        <!-- Docker -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-blue-500/30">
+                                <i class="fab fa-docker text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-blue-500 text-center">DOCKER</span>
+                        </div>
+                        
+                        <!-- Kubernetes -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-cyan-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-cyan-600/30">
+                                <i class="fas fa-dharmachakra text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-cyan-600 text-center">KUBERNETES</span>
+                        </div>
+                        
+                        <!-- Linux -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-yellow-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-yellow-600/30">
+                                <i class="fab fa-linux text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-yellow-600 text-center">LINUX</span>
+                        </div>
+                        
+                        <!-- Python -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-blue-600/30">
+                                <i class="fab fa-python text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-blue-600 text-center">PYTHON</span>
+                        </div>
+                        
+                        <!-- PostgreSQL -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-indigo-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-indigo-600/30">
+                                <i class="fas fa-database text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-indigo-600 text-center">POSTGRESQL</span>
+                        </div>
+                        
+                        <!-- GitHub Actions -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-gray-700 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-gray-700/30">
+                                <i class="fab fa-github text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-gray-300 text-center">GITHUB ACTIONS</span>
+                        </div>
+                        
+                        <!-- AWS CDK -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-red-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-red-600/30">
+                                <i class="fas fa-code text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-red-600 text-center">AWS CDK</span>
+                        </div>
+                        
+                        <!-- Nginx -->
+                        <div class="flex flex-col items-center gap-3 md:gap-4 group">
+                            <div class="w-16 h-16 md:w-24 md:h-24 bg-green-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform cursor-pointer shadow-lg shadow-green-600/30">
+                                <i class="fas fa-server text-2xl md:text-4xl text-white"></i>
+                            </div>
+                            <span class="text-xs md:text-lg font-bold text-green-600 text-center">NGINX</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CERTIFICATIONS & LANGUAGES -->
+            <section id="certifications" class="section min-h-screen flex items-center justify-center px-4 md:px-12 py-6 md:py-20">
+                <div class="max-w-7xl w-full">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-12 md:mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4" data-i18n="certifications.title">Certifications & Languages</h2>
+                        <p class="text-sm md:text-lg text-slate-400" data-i18n="certifications.subtitle">Professional qualifications and languages I speak</p>
+                    </div>
+                    
+                    <!-- Main Grid: Certifications Galeria + Languages -->
+                    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                        
+                        <!-- CERTIFICADOS - Grid 2 colunas -->
+                        <div class="md:col-span-2">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                                
+                                <!-- Certificado 1 -->
+                                <button type="button" class="group cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-80 cert-btn" data-image="assets/image/placeholder.svg" aria-label="Abrir certificado 1" aria-haspopup="dialog" aria-controls="certModal">
+                                    <div class="relative w-full h-48 md:h-64 bg-slate-900 overflow-hidden">
+                                        <img src="assets/image/placeholder.svg" alt="AWS Certification" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                            <i class="fas fa-search-plus text-3xl md:text-5xl text-white"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                                
+                                <!-- Certificado 2 -->
+                                <button type="button" class="group cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-80 cert-btn" data-image="assets/image/placeholder.svg" aria-label="Abrir certificado 2" aria-haspopup="dialog" aria-controls="certModal">
+                                    <div class="relative w-full h-48 md:h-64 bg-slate-900 overflow-hidden">
+                                        <img src="assets/image/placeholder.svg" alt="Project Management Certification" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                            <i class="fas fa-search-plus text-3xl md:text-5xl text-white"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                                
+                                <!-- Certificado 3 -->
+                                <button type="button" class="group cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-80 cert-btn" data-image="assets/image/placeholder.svg" aria-label="Abrir certificado 3" aria-haspopup="dialog" aria-controls="certModal">
+                                    <div class="relative w-full h-48 md:h-64 bg-slate-900 overflow-hidden">
+                                        <img src="assets/image/placeholder.svg" alt="AWS Solutions Architect" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                            <i class="fas fa-search-plus text-3xl md:text-5xl text-white"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                                
+                                <!-- Certificado 4 - Agile -->
+                                <button type="button" class="group cursor-pointer overflow-hidden transition-all duration-300 hover:opacity-80 cert-btn" data-image="assets/image/placeholder.svg" aria-label="Abrir certificado Agile" aria-haspopup="dialog" aria-controls="certModal">
+                                    <div class="relative w-full h-48 md:h-64 bg-slate-900 overflow-hidden">
+                                        <img src="assets/image/placeholder.svg" alt="Agile Certification" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                            <i class="fas fa-search-plus text-3xl md:text-5xl text-white"></i>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- LANGUAGES - Coluna Direita -->
+                        <div class="flex flex-col gap-4 md:gap-6">
+                            <h3 class="text-xl md:text-2xl font-bold text-white" data-i18n="certifications.languagesTitle">Languages</h3>
+                            
+                            <!-- Portuguese -->
+                            <div class="bg-gradient-to-br from-cyan-400/20 to-cyan-400/5 border border-cyan-400/30 p-4 md:p-6 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-cyan-400/20 flex items-center justify-center">
+                                        <i class="fas fa-flag text-cyan-400 text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base md:text-lg" data-i18n="certifications.languages.0.name">Portuguese</h4>
+                                </div>
+                            </div>
+                            
+                            <!-- English -->
+                            <div class="bg-gradient-to-br from-blue-400/20 to-blue-400/5 border border-blue-400/30 p-4 md:p-6 hover:border-blue-400 hover:bg-blue-400/10 transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-blue-400/20 flex items-center justify-center">
+                                        <i class="fas fa-flag text-blue-400 text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base md:text-lg" data-i18n="certifications.languages.1.name">English</h4>
+                                </div>
+                            </div>
+                            
+                            <!-- German -->
+                            <div class="bg-gradient-to-br from-yellow-400/20 to-yellow-400/5 border border-yellow-400/30 p-4 md:p-6 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-yellow-400/20 flex items-center justify-center">
+                                        <i class="fas fa-flag text-yellow-400 text-lg"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-base md:text-lg" data-i18n="certifications.languages.2.name">German</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- PROJECTS -->
+            <section id="github" class="section min-h-screen flex items-center justify-center px-4 md:px-12 py-6 md:py-20">
+                <div class="max-w-6xl w-full animate-fadeIn">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2 md:mb-4" data-i18n="github.title">GitHub Projects</h2>
+                    <p class="text-sm md:text-lg text-slate-400 mb-8 md:mb-12" data-i18n="github.subtitle">Check out some of my recent work</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4 md:gap-8">
+                        <!-- Project 1 -->
+                        <div class="p-4 md:p-6 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-indigo-500/50 hover:-translate-y-2 transition-all">
+                            <i class="fas fa-cloud text-3xl md:text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3" data-i18n="github.items.0.title">Terraform AWS Infrastructure</h3>
+                            <p class="text-slate-300 mb-3 md:mb-4 text-xs md:text-sm" data-i18n="github.items.0.description">Full AWS setup with Terraform → VPC, EC2, Load Balancer, S3, RDS, IAM.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">Terraform</span>
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">AWS</span>
+                            </div>
+                            <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs md:text-sm">
+                                <i class="fab fa-github mr-2"></i><span data-i18n="github.items.0.viewProject">View Project →</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="p-4 md:p-6 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-indigo-500/50 hover:-translate-y-2 transition-all">
+                            <i class="fas fa-chart-line text-3xl md:text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3" data-i18n="github.items.1.title">AWS Lambda with CDK</h3>
+                            <p class="text-slate-300 mb-3 md:mb-4 text-xs md:text-sm" data-i18n="github.items.1.description">Lambda function deployed via AWS CDK with CloudWatch scheduled trigger.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">AWS Lambda</span>
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">Python</span>
+                            </div>
+                            <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs md:text-sm">
+                                <i class="fab fa-github mr-2"></i><span data-i18n="github.items.1.viewProject">View Project →</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Project 3 -->
+                        <div class="p-4 md:p-6 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-indigo-500/50 hover:-translate-y-2 transition-all">
+                            <i class="fas fa-cubes text-3xl md:text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3" data-i18n="github.items.2.title">Dockerized Application (Flask + PostgreSQL)</h3>
+                            <p class="text-slate-300 mb-3 md:mb-4 text-xs md:text-sm" data-i18n="github.items.2.description">Containerized Flask app with PostgreSQL using Docker Compose.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">Docker</span>
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">PostgreSQL</span>
+                            </div>
+                            <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs md:text-sm">
+                                <i class="fab fa-github mr-2"></i><span data-i18n="github.items.2.viewProject">View Project →</span>
+                            </a>
+                        </div>
+                        
+                        <!-- Project 4 -->
+                        <div class="p-4 md:p-6 bg-slate-800/50 border border-slate-700 rounded-xl hover:border-indigo-500/50 hover:-translate-y-2 transition-all">
+                            <i class="fas fa-server text-3xl md:text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-lg md:text-xl font-bold mb-2 md:mb-3">Infrastructure Monitoring Stack</h3>
+                            <p class="text-slate-300 mb-3 md:mb-4 text-xs md:text-sm">Complete monitoring solution with CloudWatch, automated alerts, and custom dashboards for production environments.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">CloudWatch</span>
+                                <span class="px-2 py-1 bg-indigo-500/20 text-indigo-400 rounded text-xs">Automation</span>
+                            </div>
+                            <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-xs md:text-sm">
+                                <i class="fab fa-github mr-2"></i>View Project →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- RECOMMENDATIONS -->
+            <section id="recommendations" class="section min-h-screen flex items-center justify-center px-4 md:px-7 py-7 md:py-18">
+                <div class="max-w-5xl w-full animate-fadeIn">
+                    
+                    <!-- Header -->
+                    <div class="text-center mb-12 md:mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4" data-i18n="recommendations.title">Recommendations</h2>
+                        <p class="text-sm md:text-lg text-slate-400" data-i18n="recommendations.subtitle">What people say about working with me</p>
+                    </div>
+                    
+                    <!-- CAROUSEL - Desktop ONLY -->
+                    <div id="carouselContainer" class="hidden md:block w-full overflow-hidden">
+                        <ul id="recommendationsTrack" class="flex transition-transform duration-300" aria-label="Recommendations list">
+                            <!-- Cards serão inseridos aqui pelo carousel.js -->
+                        </ul>
+                        <!-- Dots Indicator -->
+                        <div class="flex justify-center gap-2 mt-8 md:mt-12" id="recommendationsDots"></div>
+                    </div>
+                    
+                    <!-- GRID - Mobile ONLY -->
+                        <div id="gridContainer" class="md:hidden w-full">
+                        <div id="recommendationsGrid" class="grid grid-cols-1 gap-6">
+                            <!-- Cards serão inseridos aqui em grid -->
+                        </div>
+                    </div>
+                        <!-- Live region for screen readers to announce slide updates -->
+                        <div id="carouselLive" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+                </div>
+            </section>
+            
+            <!-- CONTACT -->
+            <section id="contact" class="section min-h-screen flex items-center justify-center px-4 md:px-12 py-6 md:py-20">
+                <div class="max-w-6xl w-full text-center animate-fadeIn">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4" data-i18n="contact.title">Get In Touch</h2>
+                    <p class="text-sm md:text-lg text-slate-400 mb-8 md:mb-12" data-i18n="contact.description">Feel free to reach out</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4 md:gap-8">
+                        <div class="p-6 md:p-8 bg-slate-800/50 border border-slate-700 rounded-xl">
+                            <i class="fas fa-envelope text-3xl md:text-4xl text-indigo-400 mb-3 md:mb-4"></i>
+                            <h3 class="font-bold text-white mb-2 md:mb-3 text-base md:text-lg" data-i18n="contact.email">Email</h3>
+                            <a href="mailto:contact@example.com" class="text-indigo-400 text-sm md:text-base hover:text-indigo-300">contact@example.com</a>
+                        </div>
+                        <div class="p-6 md:p-8 bg-slate-800/50 border border-slate-700 rounded-xl">
+                            <i class="fas fa-map-marker-alt text-3xl md:text-4xl text-indigo-400 mb-3 md:mb-4"></i>
+                            <h3 class="font-bold text-white mb-2 md:mb-3 text-base md:text-lg" data-i18n="contact.location">Location</h3>
+                            <p class="text-slate-300 text-sm md:text-base">Deutschland, DE</p>
+                        </div>
+                        <div class="p-6 md:p-8 bg-slate-800/50 border border-slate-700 rounded-xl">
+                            <i class="fas fa-share-alt text-3xl md:text-4xl text-indigo-400 mb-3 md:mb-4"></i>
+                            <h3 class="font-bold text-white mb-2 md:mb-3 text-base md:text-lg">Social</h3>
+                            <div class="flex justify-center gap-4">
+                                <a href="#" target="_blank" class="text-xl md:text-2xl text-indigo-400 hover:text-indigo-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-xl md:text-2xl text-indigo-400 hover:text-indigo-300">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 md:mt-12 pt-6 border-t border-slate-700/50 text-center">
+                        <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
+                            <a href="impressum.html" class="text-xs md:text-sm text-slate-400 hover:text-cyan-400 transition-colors">Impressum</a>
+                            <a href="datenschutz.html" class="text-xs md:text-sm text-slate-400 hover:text-cyan-400 transition-colors">Datenschutz</a>
+                            <a href="impressum-en.html" class="text-xs md:text-sm text-slate-400 hover:text-cyan-400 transition-colors">Legal</a>
+                            <a href="privacy-policy.html" class="text-xs md:text-sm text-slate-400 hover:text-cyan-400 transition-colors">Privacy</a>
+                        </div>
+                        <p class="text-slate-500 text-xs md:text-sm">© <span id="year"></span> Example</p>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    
+    <!-- MODAL PARA CERTIFICADOS -->
+    <dialog id="certModal" aria-modal="true" aria-hidden="true" aria-label="Certificate preview" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div id="certModalInner" class="relative w-full max-w-5xl">
+            
+            <!-- Close Button -->
+            <button id="certModalClose" type="button" class="text-white hover:text-cyan-400 transition-colors" aria-label="Close certificate" title="Close certificate">
+                <i class="fas fa-times text-3xl md:text-4xl"></i>
+            </button>
+            
+            <!-- Imagem em tamanho inteiro -->
+            <img id="certModalImage" src="" alt="Certificate" class="w-full h-auto rounded-lg">
+        </div>
+    </dialog>
+</body>
+</html>
